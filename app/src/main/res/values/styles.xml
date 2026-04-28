@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BtnNumero">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_margin">6dp</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:backgroundTint">#E01313</item>
+        <item name="android:textColor">#F8F4F4</item>
+        <item name="cornerRadius">35dp</item>
+    </style>
+
+    <style name="BtnOperador" parent="BtnNumero">
+        <item name="android:backgroundTint">#FF9800</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="BtnEspecial" parent="BtnNumero">
+        <item name="android:backgroundTint">#774BC5</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="BtnCientifico" parent="BtnNumero">
+        <item name="android:layout_width">110dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:backgroundTint">#00BCD4</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+</resources>

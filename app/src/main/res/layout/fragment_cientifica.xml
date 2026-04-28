@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- Display -->
+    <TextView
+        android:id="@+id/resu_display"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:autoSizeMaxTextSize="48sp"
+        android:autoSizeMinTextSize="14sp"
+        android:autoSizeTextType="uniform"
+        android:background="#F0F0F0"
+        android:ellipsize="start"
+        android:gravity="end|bottom"
+        android:maxLines="1"
+        android:padding="16dp"
+        android:text="0"
+        android:textSize="48sp" />
+
+    <!-- Fila 1: 7 8 9 ÷ -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_7"
+            style="@style/BtnNumero"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/btn_8"
+            style="@style/BtnNumero"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/btn_9"
+            style="@style/BtnNumero"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/btn_div"
+            style="@style/BtnOperador"
+            android:text="÷" />
+    </LinearLayout>
+
+    <!-- Fila 2: 4 5 6 × -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_4"
+            style="@style/BtnNumero"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/btn_5"
+            style="@style/BtnNumero"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/btn_6"
+            style="@style/BtnNumero"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/btn_mul"
+            style="@style/BtnOperador"
+            android:text="×" />
+    </LinearLayout>
+
+    <!-- Fila 3: 1 2 3 - -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_1"
+            style="@style/BtnNumero"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/btn_2"
+            style="@style/BtnNumero"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/btn_3"
+            style="@style/BtnNumero"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/btn_res"
+            style="@style/BtnOperador"
+            android:text="-" />
+    </LinearLayout>
+
+    <!-- Fila 4: +/- 0 . + -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_negativo"
+            style="@style/BtnNumero"
+            android:text="+/-" />
+
+        <Button
+            android:id="@+id/btn_0"
+            style="@style/BtnNumero"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/btn_punto"
+            style="@style/BtnNumero"
+            android:text="." />
+
+        <Button
+            android:id="@+id/btn_sum"
+            style="@style/BtnOperador"
+            android:text="+" />
+    </LinearLayout>
+
+    <!-- Fila 5: C y = -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_clear"
+            style="@style/BtnEspecial"
+            android:layout_width="0dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:text="C" />
+
+        <Button
+            android:id="@+id/btn_igual"
+            style="@style/BtnEspecial"
+            android:layout_width="0dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:text="=" />
+
+
+    </LinearLayout>
+
+    <!-- Sección científica: Centrada -->
+    <LinearLayout
+        android:id="@+id/Cientificos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Fila 1 científica -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_potencia"
+                style="@style/BtnCientifico"
+                android:text="xʸ" />
+
+            <Button
+                android:id="@+id/btn_raiz"
+                style="@style/BtnCientifico"
+                android:text="√x" />
+
+            <Button
+                android:id="@+id/btn_seno"
+                style="@style/BtnCientifico"
+                android:text="sin°" />
+
+        </LinearLayout>
+
+        <!-- Fila 2 científica -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_factorial"
+                style="@style/BtnCientifico"
+                android:text="n!" />
+
+            <Button
+                android:id="@+id/btn_grad_rad"
+                style="@style/BtnCientifico"
+                android:text="→rad" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
