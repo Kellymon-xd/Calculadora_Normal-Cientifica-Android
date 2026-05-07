@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 open class FragmentCalculadora : Fragment() {
 
     protected lateinit var resu_display: TextView
+    protected lateinit var expr_display: TextView
     protected var primerNumero: Double = 0.0
     protected var operador: String = ""
     protected var nuevaEntrada: Boolean = true
@@ -24,6 +25,7 @@ open class FragmentCalculadora : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         resu_display = view.findViewById(R.id.resu_display)
+        expr_display = view.findViewById(R.id.expr_display)
 
         // Botones numéricos
         val numeros = mapOf(
@@ -88,15 +90,18 @@ open class FragmentCalculadora : Fragment() {
         primerNumero = resu_display.text.toString().toDoubleOrNull() ?: 0.0
         operador = op
         nuevaEntrada = true
+        expr_display.text = "${Funciones.formatearResultado(primerNumero)} $op"
     }
 
     protected open fun calcular() {
         if (operador.isEmpty()) return
         val segundoNumero = resu_display.text.toString().toDoubleOrNull() ?: return
+        val expresion = "${Funciones.formatearResultado(primerNumero)} $operador ${Funciones.formatearResultado(segundoNumero)} ="
         val resultado = Funciones.calcularEstandar(primerNumero, operador, segundoNumero)
         mostrarResultado(resultado)
         operador = ""
         nuevaEntrada = true
+        expr_display.text = expresion
     }
 
     protected fun mostrarResultado(resultado: Double) {
@@ -106,6 +111,7 @@ open class FragmentCalculadora : Fragment() {
 
     protected fun limpiar() {
         resu_display.text = "0"
+        expr_display.text = ""
         primerNumero = 0.0
         operador = ""
         nuevaEntrada = true
