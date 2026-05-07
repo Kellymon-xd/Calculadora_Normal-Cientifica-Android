@@ -21,7 +21,7 @@ object Funciones {
     }
 
     fun factorial(n: Int): Double {
-        if (n < 0) return Double.NaN
+        if (n < 0) throw IllegalArgumentException("El factorial no existe para números negativos")
         var resultado = 1L
         for (i in 1..n) {
             resultado *= i
