@@ -24,18 +24,19 @@ open class FragmentCientifica : FragmentCalculadora() {
 
         // 2. Raíz cuadrada √x
         view.findViewById<Button>(R.id.btn_raiz).setOnClickListener {
-            ejecutarOperacionInmediata { x -> Funciones.raizCuadrada(x) }
+            ejecutarOperacionInmediata("√") { x -> Funciones.raizCuadrada(x) }
         }
 
         // 3. Seno sin(°)
         view.findViewById<Button>(R.id.btn_seno).setOnClickListener {
-            ejecutarOperacionInmediata { x -> Funciones.seno(x) }
+            ejecutarOperacionInmediata("sin") { x -> Funciones.seno(x) }
         }
 
         // 4. Factorial n!
         view.findViewById<Button>(R.id.btn_factorial).setOnClickListener {
             val actual = resu_display.text.toString().toIntOrNull()
             if (actual != null) {
+                expr_display.text = "fact(${Funciones.formatearResultado(actual.toDouble())}) ="
                 mostrarResultado(Funciones.factorial(actual))
                 finalizarOperacion()
             }
@@ -43,17 +44,19 @@ open class FragmentCientifica : FragmentCalculadora() {
 
         // 5. Grados a Radianes
         view.findViewById<Button>(R.id.btn_grad_rad).setOnClickListener {
-            ejecutarOperacionInmediata { x -> Funciones.gradosARadianes(x) }
+            ejecutarOperacionInmediata("rad") { x -> Funciones.gradosARadianes(x) }
         }
     }
 
-    private fun ejecutarOperacionInmediata(operacion: (Double) -> Double) {
+    private fun ejecutarOperacionInmediata(nombreOperacion: String, operacion: (Double) -> Double) {
         val x = resu_display.text.toString().toDoubleOrNull()
         if (x != null) {
+            expr_display.text = "$nombreOperacion(${Funciones.formatearResultado(x)}) ="
             mostrarResultado(operacion(x))
             finalizarOperacion()
         }
     }
+    
     private fun finalizarOperacion() {
         operador = ""
         nuevaEntrada = true
