@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
     android:padding="8dp">
 
@@ -43,7 +44,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:orientation="horizontal">
@@ -72,7 +74,8 @@
     <!-- Fila 2: 4 5 6 × -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:orientation="horizontal">
@@ -101,7 +104,8 @@
     <!-- Fila 3: 1 2 3 - -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:orientation="horizontal">
@@ -130,7 +134,8 @@
     <!-- Fila 4: +/- 0 . + -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:orientation="horizontal">
@@ -159,7 +164,8 @@
     <!-- Fila 5: C y = -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:orientation="horizontal">
@@ -187,7 +193,8 @@
     <LinearLayout
         android:id="@+id/Cientificos"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:orientation="vertical">
@@ -195,7 +202,8 @@
         <!-- Fila 1 científica -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -219,7 +227,8 @@
         <!-- Fila 2 científica -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:gravity="center"
             android:orientation="horizontal">
 

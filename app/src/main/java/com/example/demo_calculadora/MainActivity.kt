@@ -1,5 +1,11 @@
 package com.example.demo_calculadora
 
+/** KELLY BEITIA, 8-1023-152 (COORDINADORA)
+ * LEONARDO CASTRO, 8-1032-1264
+ * JORGE SARMIENTO, 3-757-1758
+ * MARIAM HARRIS 1-756-2331
+ **/
+
 import android.os.Bundle
 import android.widget.Switch
 import androidx.appcompat.app.AppCompatActivity

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="BtnNumero">
-        <item name="android:layout_width">70dp</item>
-        <item name="android:layout_height">70dp</item>
-        <item name="android:layout_margin">6dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">4dp</item>
         <item name="android:textSize">22sp</item>
         <item name="android:backgroundTint">#E01313</item>
         <item name="android:textColor">#F8F4F4</item>
@@ -21,8 +22,6 @@
     </style>
 
     <style name="BtnCientifico" parent="BtnNumero">
-        <item name="android:layout_width">110dp</item>
-        <item name="android:layout_height">60dp</item>
         <item name="android:backgroundTint">#00BCD4</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
